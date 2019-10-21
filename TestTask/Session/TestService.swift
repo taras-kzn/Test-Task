@@ -45,7 +45,7 @@ class TestService {
         let parameters: Parameters = [
             "a" : "add_entry",
             "session" : session,
-            "body" : "всем приветfsefadf"
+            "body" : "всемqwgrewegqwg"
         ]
         let headers = [
             "token" : apiKey
@@ -54,13 +54,13 @@ class TestService {
         let url = baseUrl+path
 
         
-        Alamofire.request(url, method: .get, parameters: parameters,headers: headers ).responseJSON { response in
+        Alamofire.request(url, method: .post, parameters: parameters,headers: headers ).responseJSON { response in
             print(response)
         }
         
     }
     
-    func loadGetEntries(sessionID: String) {
+    func loadGetEntries(sessionID: String, completion: @escaping ([Users]) -> Void ) {
 
         let path = "/testAPI/"
         let session = sessionID
@@ -76,13 +76,37 @@ class TestService {
         let url = baseUrl+path
 
 
-        Alamofire.request(url, method: .post, parameters: parameters,headers: headers ).responseJSON { response in
-            
-            print(response)
-
-
+        Alamofire.request(url, method: .post, parameters: parameters,headers: headers ).responseData { response in
+            guard let data = response.value else {return}
+            let array = try? JSONDecoder().decode(ListOfUsers.self, from: data).data
+            guard let arrayUser = array else {return}
+            arrayUser.forEach { ar in
+                completion(ar)
+            }
         }
 
     }
+    
+//    func loadGetEntries(sessionID: String) {
+//
+//        let path = "/testAPI/"
+//        let session = sessionID
+//        let parameters: Parameters = [
+//            "a" : "get_entries",
+//            "session" : session
+//
+//        ]
+//        let headers = [
+//            "token" : apiKey
+//        ]
+//
+//        let url = baseUrl+path
+//
+//
+//        Alamofire.request(url, method: .post, parameters: parameters,headers: headers ).responseJSON { response in
+//            print(response)
+//        }
+//
+//    }
     
 }

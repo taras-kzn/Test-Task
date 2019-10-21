@@ -17,6 +17,7 @@
 		84D59F7A235D92620079FF04 /* NewSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D59F79235D92620079FF04 /* NewSession.swift */; };
 		84D59F81235DC0FA0079FF04 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D59F80235DC0FA0079FF04 /* TestTableViewCell.swift */; };
 		84D59F83235DC71E0079FF04 /* ListOfUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D59F82235DC71E0079FF04 /* ListOfUsers.swift */; };
+		84D59F85235E212F0079FF04 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D59F84235E212F0079FF04 /* AddViewController.swift */; };
 		FB0E5BDB622B6D75CCDB0746 /* Pods_TestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546ADFE34F35DBABA146CD0E /* Pods_TestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		84D59F79235D92620079FF04 /* NewSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSession.swift; sourceTree = "<group>"; };
 		84D59F80235DC0FA0079FF04 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		84D59F82235DC71E0079FF04 /* ListOfUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfUsers.swift; sourceTree = "<group>"; };
+		84D59F84235E212F0079FF04 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		E339D99C6CE78A6FF8BAABB0 /* Pods-TestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTask.release.xcconfig"; path = "Target Support Files/Pods-TestTask/Pods-TestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				84D59F6A235B35D60079FF04 /* Assets.xcassets */,
 				84D59F6C235B35D60079FF04 /* LaunchScreen.storyboard */,
 				84D59F6F235B35D60079FF04 /* Info.plist */,
+				84D59F84235E212F0079FF04 /* AddViewController.swift */,
 			);
 			path = TestTask;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			files = (
 				84D59F66235B35D50079FF04 /* ViewController.swift in Sources */,
 				84D59F7A235D92620079FF04 /* NewSession.swift in Sources */,
+				84D59F85235E212F0079FF04 /* AddViewController.swift in Sources */,
 				84D59F77235B3C150079FF04 /* TestService.swift in Sources */,
 				84D59F62235B35D50079FF04 /* AppDelegate.swift in Sources */,
 				84D59F64235B35D50079FF04 /* SceneDelegate.swift in Sources */,
